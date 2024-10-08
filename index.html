@@ -27,7 +27,23 @@
         p {
             text-align: justify;
         }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
     </style>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 </head>
 <body>
     <div class="container">
@@ -44,6 +60,13 @@
         <p>
             So, overall, I’d say this program served its purpose. Although, I could say that around 50% of what was being discussed to us was mostly common sense, and then only the other 50% was actual new information for us, due to the nature of our generation. I’m still glad they managed to get this out there especially for future cybersecurity personnel and lawyers. And even with my grievances about the program and how some things were handled, I’d still say that this program was important enough to happen in our school, even if it took time off our schedules.
         </p>
+        <button pys-onclick="thankYou()">Click me for a surprise!</button>
     </div>
+
+    <py-script>
+        def thankYou():
+            from js import alert
+            alert("Thanks for reading!")
+    </py-script>
 </body>
 </html>
